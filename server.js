@@ -4,7 +4,7 @@ const app = express();
 const userRouter = require("./api/user");
 app.use(express.json());
 app.use("/user",userRouter);
-const port = 3000;
+const port = process.env.PORT || 3000;
 const bodyParser = require('express').json;
 app.use(bodyParser());
 app.listen(port,()=>{
