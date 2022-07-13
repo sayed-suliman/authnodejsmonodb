@@ -244,4 +244,15 @@ router.post("/signin",(req,res)=>{
     }
     
 });
+router.get("/fetch",(req,res)=>{
+    User.find().then(value=>{
+        res.json({
+            val:value
+        })
+    }).catch(err=>{
+        res.status(404).json({
+            message:"Some error occures in first stages"
+        })
+    })
+});
 module.exports = router;
