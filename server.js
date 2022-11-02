@@ -7,6 +7,7 @@ app.use("/user",userRouter);
 const port = process.env.PORT || 3000;
 const bodyParser = require('express').json;
 app.use(bodyParser());
+
 app.listen(port,()=>{
     console.log("listen Port : " + port);
 });
